@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/baseof/baseof.css">
+    {% block css %}
+    {% endblock %}
     <title> {{ title }} </title>
 </head>
 <body>
@@ -20,9 +22,7 @@
 </nav>
 
 <div class="content">
-    <h1>Content Block: </h1><br>
     {% block content %}
-        
     {% endblock %}
 </div>
 
@@ -38,5 +38,7 @@
 
 </body>
     <script src="../static/js/baseof.js"></script>
-
+    
+    {% block js %}
+    {% endblock %}
 </html>

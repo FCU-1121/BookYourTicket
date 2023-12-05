@@ -1,0 +1,328 @@
+
+.show-container {
+    width: 100%;
+    height: 80%;
+    background-color: (128, 128, 128, 0.554);
+    
+    
+    .position-container {
+        width: 100%;
+        height: 30%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .show-position {
+            cursor: pointer;
+            flex: .4;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        #start-position {
+            &::after {
+                content: "起始站";
+                display: block;
+                position: absolute;
+                // z-index: 999;
+                top: 1%;
+                left: 2%;
+                font-size: 20px;
+                font-weight: 400;
+                color: grey;
+
+            }
+        }
+
+        #end-position {
+            &::after {
+                content: "終點站";
+                display: block;
+                position: absolute;
+                // z-index: 999;
+                top: 1%;
+                right: 2%;
+                font-size: 20px;
+                font-weight: 400;
+                color: grey;
+
+            }
+        }
+    
+        #swap {
+            flex: .2;
+            height: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                width: 60%;
+                height: auto;
+            }
+        }
+    }
+
+    
+}
+
+#search {
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 10px;
+    margin: 20px 0 ;
+    font-size: 20px;
+}
+
+
+///////////////////////////////////////////////
+
+.time-container {
+    width: 100%;
+    height: 10%;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        font-weight: 400;
+        color: grey;
+    }
+
+    .show-time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        height: auto;
+        font-size: 22px;
+        font-weight: 500;
+    }
+}
+
+
+
+
+.select-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(128, 128, 128, 0.554);
+    backdrop-filter: blur(10px);
+
+    &.is-active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .select-position {
+        margin-top: 3vh;
+        width: 100%;
+        height: 70%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .position {
+            flex: .4;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            ul {
+                overflow-y: scroll;
+                position: relative;
+                width: 100%;
+                height: 100%;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+    
+                li {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 20px;
+                    line-height: 50px;
+                    cursor: pointer;
+
+                    &.is-active {
+                        font-size: 30px;
+                        font-weight: 600;
+                        color: #1d608d;
+
+                        &::after {
+                            background-color: #1d608d;
+                        }
+                    }
+
+                    &.unenable {
+                        color: grey;
+                        cursor: default;
+                    }
+                }
+            }
+            
+        }
+    }
+
+    .buttons {
+        width: 100%;
+        height: 30%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        button {
+            cursor: pointer;
+            flex: .4;
+            height: auto;
+            border: none;
+            background-color: #3498db;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 10px 20px;
+        }
+    }
+    
+}
+
+
+.start-position {
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 4px;
+        width: 1px; /* 线的宽度 */
+        height: 158%; /* 线的高度 */
+        background-color: #000; /* 线的颜色 */
+    }
+
+    li {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 99;
+            background-color: #000000;
+            top: 20px;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+
+.end-position {
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 4px;
+        width: 1px; /* 线的宽度 */
+        height: 158%; /* 线的高度 */
+        background-color: #000; /* 线的颜色 */
+    }
+
+
+    li {
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: 99;
+            background-color: #000000;
+            top: 20px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+
+#swap {
+    cursor: pointer;
+}
+
+
+
+
+
+.select-time {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(128, 128, 128, 0.554);
+    backdrop-filter: blur(10px);
+
+    &.is-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        position: relative;
+        width: 80%;
+        height: 50%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            height: auto;
+            padding: 8px;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        button {
+            width: 40%;
+            height: auto;
+            position: absolute;
+            right: 6%;
+            bottom: 20%;
+            background-color: #3498db;
+            font-size: 20px;
+            color: #000;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    }
+}

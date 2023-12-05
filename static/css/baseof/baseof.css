@@ -6,13 +6,18 @@
 }
 
 :root {
-  overflow: hidden;
   width: 100vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 body {
-  width: 100%;
+  position: relative;
+  border: grey 3px solid;
+  width: 400px;
   height: 100%;
 }
 
@@ -42,9 +47,14 @@ nav .nav-container a img {
 }
 
 .content {
+  position: relative;
   width: 100%;
   height: 80vh;
   background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 footer {
