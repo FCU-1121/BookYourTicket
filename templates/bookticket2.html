@@ -1,0 +1,37 @@
+<!-- bookticket2.html -->
+{% extends 'baseof.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/bookticket2/bookticket2.css">
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="bookticket2-nav">
+    <a href="/bookTicket"><img src="../static/icon/left-arrow.png" alt="left-arrow" ></a>
+    <div class="start-end-container">
+        <h1 class="start">台北</h1>
+        <h1>&nbsp>&nbsp</h1>
+        <h1 class="end">台南</h1>
+    </div>
+</div>
+<ul class="tickets">
+    <li>
+        <div class="show-time">
+            <div class="start-end-time" id="start-time">20:00</div>
+            <img src="../static/icon/right-arrow.png" alt="right-arrow">
+            <div class="start-end-time" id="end-time">21:00</div>
+        </div>
+        <div class="train-info">
+            trainID:&nbsp
+            <div id="train-number">
+                5588
+            </div>
+        </div>
+    </li>
+</ul>
+{% endblock %}

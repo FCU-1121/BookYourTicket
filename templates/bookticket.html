@@ -10,6 +10,7 @@
 {% block js %}
     <script src="../static/js/bookticket.js"></script>
     <script src="../static/js/select_time.js"></script>
+    <script src="../static/js/select_position.js"></script>
 {% endblock %}
 
 
@@ -27,7 +28,7 @@
         </div>
     </div>    
 
-    <button id="search" type="submit" onclick="search()">查詢</button>
+    <a href="/showTickets" style="text-decoration: none;"><button id="search" type="submit" onclick="search()">查詢</button></a>
 
 
     <div class="select-container">
