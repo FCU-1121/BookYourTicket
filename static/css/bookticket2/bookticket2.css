@@ -29,6 +29,9 @@
   height: auto;
   padding: 5px;
 }
+#tickets::-webkit-scrollbar {
+  display: none;
+}
 #tickets li {
   cursor: pointer;
   list-style-type: none;

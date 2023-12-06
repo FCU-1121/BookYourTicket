@@ -9,8 +9,9 @@ app = Flask(__name__)
 CORS(app)  # 启用 CORS，允许跨域请求
 
 @app.route('/')
-def home():
-    return render_template('home.html', title='Home')
+@app.route('/bookTicket')
+def bookTicket():
+    return render_template('bookticket.html', title = 'Bookticket')
 
 @app.route('/about')
 def about():
@@ -23,10 +24,6 @@ def notification():
 @app.route('/myTicket')
 def myTicket():
     return render_template('myticket.html', title = 'YourTicket')
-
-@app.route('/bookTicket')
-def bookTicket():
-    return render_template('bookticket.html', title = 'Bookticket')
 
 @app.route('/showTickets')
 def showTickets():

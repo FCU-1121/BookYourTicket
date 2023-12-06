@@ -11,6 +11,7 @@
     <script src="../static/js/bookticket.js"></script>
     <script src="../static/js/select_time.js"></script>
     <script src="../static/js/select_position.js"></script>
+    <script src="../static/js/select_amount.js"></script>
 {% endblock %}
 
 
@@ -25,6 +26,13 @@
         <div class="time-container">
             <h1 class="title">出發時間</h1>
             <div class="show-time" id="start-time"></div>
+        </div>
+
+        <div class="amount-container">
+            <h1 class="title">您的票種</h1>
+
+            <ul class="show-amount">
+            </ul>
         </div>
     </div>    
 
@@ -62,4 +70,52 @@
             <button type="button" onclick="submitForm()">完成</button>
         </form>
     </div>
+
+    <div class="select-amount">
+        <div class="select-amount-container">
+            <div class="ticket-type">
+                <div class="title">成人票：</div>
+                <div class="quantity">
+                    <button onclick="decrement('adult')">-</button>
+                    <span id="adult">0</span>
+                    <button onclick="increment('adult')" class="increment">+</button>
+                </div>
+            </div>
+
+            <div class="ticket-type">
+                <div class="title">孩童票：</div>
+                <div class="quantity">
+                    <button onclick="decrement('child')">-</button>
+                    <span id="child">0</span>
+                    <button onclick="increment('child')" class="increment">+</button>
+                </div>
+            </div>
+        
+            <div class="ticket-type">
+                <div class="title">敬老票：</div>
+                <div class="quantity">
+                    <button onclick="decrement('senior')">-</button>
+                    <span id="senior">0</span>
+                    <button onclick="increment('senior')" class="increment">+</button>
+                </div>
+            </div>
+        
+            <div class="ticket-type">
+                <div class="title">學生票：</div>
+                <div class="quantity">
+                    <button onclick="decrement('student')">-</button>
+                    <span id="student">0</span>
+                    <button onclick="increment('student')" class="increment">+</button>
+                </div>
+            </div>
+            
+            <div class="result">
+                <div id="total">總票數：0&nbsp&nbsp&nbsp最多選 5 張</div>
+                <div class="alert-message">(最少 1 張，最多選 5 張)</div>
+            </div>
+            
+            <button class="amount-ok" onclick="amountOk()">完成</button>
+        </div>
+    </div>
+
 {% endblock %}

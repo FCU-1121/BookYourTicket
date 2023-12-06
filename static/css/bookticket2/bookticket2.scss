@@ -29,6 +29,10 @@
 
 #tickets {
     overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     width: 100%;
     height: auto;
     padding: 5px;

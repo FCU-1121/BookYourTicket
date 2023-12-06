@@ -1,18 +1,11 @@
 {
   "myTickets": [
     {
-      "startPosition": "桃園",
-      "endPosition": "台中",
-      "startTime": "10:00",
-      "arriveTime": "13:00",
-      "trainID": "1001"
-    },
-    {
-      "startPosition": "桃園",
-      "endPosition": "台中",
-      "startTime": "15:30",
-      "arriveTime": "18:30",
-      "trainID": "1008"
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913"
     }
   ]
 }
