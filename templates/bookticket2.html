@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block js %}
-
+<script src="../static/js/matchTickets.js"></script>
 {% endblock %}
 
 
@@ -14,24 +14,26 @@
 <div class="bookticket2-nav">
     <a href="/bookTicket"><img src="../static/icon/left-arrow.png" alt="left-arrow" ></a>
     <div class="start-end-container">
-        <h1 class="start">台北</h1>
+        <h1 class="start"></h1>
         <h1>&nbsp>&nbsp</h1>
-        <h1 class="end">台南</h1>
+        <h1 class="end"></h1>
     </div>
 </div>
-<ul class="tickets">
-    <li>
-        <div class="show-time">
-            <div class="start-end-time" id="start-time">20:00</div>
-            <img src="../static/icon/right-arrow.png" alt="right-arrow">
-            <div class="start-end-time" id="end-time">21:00</div>
-        </div>
-        <div class="train-info">
-            trainID:&nbsp
-            <div id="train-number">
-                5588
-            </div>
-        </div>
-    </li>
+
+<ul id="tickets">
 </ul>
+
+<div class="bookcheck-container">
+    <div class="bookcheck">
+        <div class="title">提醒訊息</div>
+        <div class="message">
+            您確定要訂票嗎？
+        </div>
+        <div class="buttons">
+            <button id="cancle">取消</button>
+            <button id="sure">確認</button>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

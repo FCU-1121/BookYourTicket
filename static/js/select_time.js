@@ -19,8 +19,9 @@ function generateTime() {
   showStartTime.innerHTML = `${startTime["Date"]}\t${startTime["Time"]}`;
   let currentTime = startTime["Time"].split(':')[0];
   let timeList = "";
-  for(let i = currentTime; i < 24; i++) {
-    timeList += `<option value=${i + ":00"}>${i + ":00"}</option>`
+  for(let i = 7; i < 24; i++) {
+    const formattedHour = i.toString().padStart(2, '0');
+    timeList += `<option value=${formattedHour + ":00"}>${formattedHour + ":00"}</option>`
   }
   
   timeOptionsContainer.innerHTML = timeList;
@@ -38,21 +39,14 @@ flatpickr("#date", {
   defaultDate: now, // 將日期預設為今天
 });
 
-function submitForm() {
-  selectTImeContainer.classList.remove('is-active');
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
-  startTime["Date"] = date;
-  startTime["Time"] = time;
-  showStartTime.innerHTML = `${date}\t${time}`;
 
-
+function updateTimeOfData() {
   fetch('/updateConfigOfTime', {
-      method: 'POST',
-      headers: {
-          'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(startTime),
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(startTime),
   })
   .then(response => response.json())
   .then(updatedData => {
@@ -62,5 +56,18 @@ function submitForm() {
   .catch(error => {
       console.error('Error updating start time:', error);
   });
-
 }
+
+function submitForm() {
+  selectTImeContainer.classList.remove('is-active');
+  const date = document.getElementById('date').value;
+  const time = document.getElementById('time').value;
+  startTime["Date"] = date;
+  startTime["Time"] = time;
+  showStartTime.innerHTML = `${date}\t${time}`;
+  updateTimeOfData();
+}
+
+document.querySelector('#search').addEventListener('click', () => {
+  updateTimeOfData();
+})

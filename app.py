@@ -1,6 +1,6 @@
 # app.py
 
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, make_response
 from flask_cors import CORS
 import json
 
@@ -73,6 +73,24 @@ def updateConfigOfPosition():
 
     except Exception as e:
         # 如果有錯誤，回傳一個表示失敗的JSON
+        return jsonify({"status": "error", "message": str(e)})
+
+
+@app.route('/updateMyTickets', methods=['POST'])
+def updateMyTickets():
+    with open('./static/json/myTickets.json', 'r') as file:
+        data = json.load(file)
+    try:
+        # 從請求的JSON主體中解析數據
+        newTicket = request.get_json()
+        print(newTicket)
+        data["myTickets"].append(newTicket)
+        print(data["myTickets"])
+        with open('./static/json/myTickets.json', 'w') as file:
+            json.dump(data, file, indent=2, ensure_ascii=False)
+        return jsonify({"status": "success"})
+
+    except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
 
 

@@ -11,10 +11,13 @@ const positions = [
     "嘉義",
     "台南",
     "高雄",
+    "屏東",
     "台東",
     "花蓮",
     "宜蘭"
 ];
+
+
 
 let startendPosition = {
     "start-position" : "台北",
@@ -107,7 +110,6 @@ function updatePositionOfData() {
     })
     .then(response => response.json())
     .then(updatedData => {
-        // 在控制台中查看从后端返回的数据
         console.log('Updated data from server:', updatedData);
     })
     .catch(error => {
@@ -138,3 +140,7 @@ function swap() {
     setPositionStyle();
     updatePositionOfData();
 }
+
+document.querySelector('#search').addEventListener('click', () => {
+    updatePositionOfData();
+})
