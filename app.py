@@ -36,33 +36,44 @@ def showTickets():
 def setting():
     return render_template('setting.html', title = 'Setting')
 
-@app.route('/updateConfig', methods=['POST'])
-def updateConfig():
-    with open('./static/json/config.json', 'r') as file:
-        data = json.load(file)
+@app.route('/updateConfigOfTime', methods=['POST'])
+def updateConfigOfTime():
+    
     try:
+        with open('./static/json/config.json', 'r') as file:
+            data = json.load(file)
         # 從請求的JSON主體中解析數據
-        start_time = request.get_json()
-        print(start_time)
-        data["startDate"] = start_time["Date"]
-        data["startTime"] = start_time["Time"]
+        startTime = request.get_json()
+        print(startTime)
+        data["startDate"] = startTime["Date"]
+        data["startTime"] = startTime["Time"]
         print(data)
         with open('./static/json/config.json', 'w') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
         return jsonify({"status": "success"})
 
-
-        # # 在這裡處理start_time，你可以更新伺服器端的數據，或者進行其他操作
-        # # 這裡只是一個簡單的例子，回傳一個表示成功的JSON
-        # return jsonify({"status": "success", "message": f"Received start time: {start_time}"})
+    except Exception as e:
+        # 如果有錯誤，回傳一個表示失敗的JSON
+        return jsonify({"status": "error", "message": str(e)})
+    
+@app.route('/updateConfigOfPosition', methods=['POST'])
+def updateConfigOfPosition():
+    with open('./static/json/config.json', 'r') as file:
+        data = json.load(file)
+    try:
+        # 從請求的JSON主體中解析數據
+        startendPosition = request.get_json()
+        print(startendPosition)
+        data["startPosition"] = startendPosition["start-position"]
+        data["endPosition"] = startendPosition["end-position"]
+        print(data)
+        with open('./static/json/config.json', 'w') as file:
+            json.dump(data, file, indent=2, ensure_ascii=False)
+        return jsonify({"status": "success"})
 
     except Exception as e:
         # 如果有錯誤，回傳一個表示失敗的JSON
         return jsonify({"status": "error", "message": str(e)})
-
-    # with open('config.json', 'r') as file:
-    #     data = json.load(file)
-    # print("原始数据:", data)
 
 
 if __name__ == '__main__':

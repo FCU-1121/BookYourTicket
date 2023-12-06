@@ -94,9 +94,26 @@ showPosition.forEach(element => {
 
 function removeClass() {
     selectContainer.classList.remove('is-active');
+    updatePositionOfData();
 }
 
-
+function updatePositionOfData() {
+    fetch('/updateConfigOfPosition', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(startendPosition),
+    })
+    .then(response => response.json())
+    .then(updatedData => {
+        // 在控制台中查看从后端返回的数据
+        console.log('Updated data from server:', updatedData);
+    })
+    .catch(error => {
+        console.error('Error updating start time:', error);
+    });
+}
 
 
 for(let i = 0; i < positionsLiArray.length; i++) {
@@ -119,4 +136,5 @@ function swap() {
     startendPosition["start-position"] = startendPosition["end-position"];
     startendPosition["end-position"] = temp;
     setPositionStyle();
+    updatePositionOfData();
 }

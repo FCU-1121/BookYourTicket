@@ -42,10 +42,12 @@ function submitForm() {
   selectTImeContainer.classList.remove('is-active');
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
+  startTime["Date"] = date;
+  startTime["Time"] = time;
   showStartTime.innerHTML = `${date}\t${time}`;
-  
 
-  fetch('/updateConfig', {
+
+  fetch('/updateConfigOfTime', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',
