@@ -1,11 +1,4 @@
 {
   "myTickets": [
-    {
-      "startPosition": "台北",
-      "endPosition": "台南",
-      "startTime": "09:00",
-      "arriveTime": "16:00",
-      "trainID": "0913"
-    }
   ]
 }

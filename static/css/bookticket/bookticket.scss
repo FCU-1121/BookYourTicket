@@ -23,6 +23,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
 
         .show-position {
             cursor: pointer;
@@ -107,6 +108,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
     h1 {
         display: flex;
         justify-content: center;
@@ -359,6 +361,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 2.5px 2.5px 5px rgba(0, 0, 0, 0.1);
     h1 {
         display: flex;
         justify-content: center;
