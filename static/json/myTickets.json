@@ -27,6 +27,13 @@
       "startTime": "08:00",
       "arriveTime": "13:00",
       "trainID": "1001"
+    },
+    {
+      "startPosition": "基隆",
+      "endPosition": "台中",
+      "startTime": "08:00",
+      "arriveTime": "13:00",
+      "trainID": "1001"
     }
   ]
 }
