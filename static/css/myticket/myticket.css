@@ -1,0 +1,91 @@
+main {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: scroll;
+}
+main .ticket-container {
+  margin: 10px 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .ticket-container .card-title {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+main .ticket-container .card-title .order-id, main .ticket-container .card-title .ticket-type {
+  font-size: 0.8rem;
+}
+main .ticket-container .card {
+  width: 95%;
+  height: 8.5rem;
+  background-color: white;
+  box-shadow: 0 0 10px darkgray;
+  border-radius: 5px;
+}
+main .ticket-container .card .ticket_details {
+  height: 1.5rem;
+  padding-top: 0.2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: 1px solid gainsboro;
+}
+main .ticket-container .card .ticket_details #route {
+  float: left;
+  font-size: 0.8rem;
+}
+main .ticket-container .card .ticket_details #id {
+  float: right;
+  font-size: 0.8rem;
+}
+main .ticket-container .card .station_details {
+  width: 100%;
+  height: 4.5rem;
+  border-bottom: 4px solid gainsboro;
+}
+main .ticket-container .card .station_details .station-group {
+  width: 100%;
+  height: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .ticket-container .card .station_details .station-group i {
+  color: #3498db;
+  font-size: 2rem;
+}
+main .ticket-container .card .station_details .station-group .station .name {
+  font-size: 0.8rem;
+}
+main .ticket-container .card .station_details .station-group .station .time {
+  font-size: 1.3rem;
+}
+main .ticket-container .card .seat_details {
+  width: 100%;
+  padding: 0 0.8rem;
+  padding-top: 0.5rem;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid #3498db;
+}
+main .ticket-container .card .seat_details .train-id {
+  display: flex;
+  font-size: 1.3rem;
+  align-items: baseline;
+}
+main .ticket-container .card .seat_details .train-id span {
+  font-size: 0.7rem;
+  margin: 2px;
+}/*# sourceMappingURL=myticket.css.map */

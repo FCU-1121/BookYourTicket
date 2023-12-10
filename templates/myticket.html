@@ -1,2 +1,43 @@
 <!-- myticket.html -->
+{% block css %}
+<link rel="stylesheet" href="../static/css/myticket/myticket.css">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+{% endblock %}
 {% extends 'baseof.html' %}
+
+{% block content %}
+<main>
+    {% for ticket in tickets %}
+    <div class="ticket-container">
+        <div class="card-title">
+            <div class="order-id">訂位代號 {{ ticket.orderID }}</div>
+            <div class="ticket-type">{{ ticket.type[0:-1] }} 1 張</div>
+        </div>
+        <div class="card">
+            <div class="ticket_details">
+                <span id="route">{{ ticket.routeType }} · {{ ticket.leaveDate }}</span>
+                <span id="id">票號 {{ ticket.ticketID }}</span>
+            </div>
+            <div class="station_details">
+                <div class="station-group">
+                    <div id="start" class="station">
+                        <div class="name">{{ ticket.startPosition }}</div>
+                        <div class="time">{{ ticket.startTime }}</div>
+                    </div>
+                    <i class="fi fi-br-arrow-right"></i>
+                    <div id="end" class="station">
+                        <div class="name" style="float: right;">{{ ticket.endPosition }}</div>
+                        <div class="time">{{ ticket.arriveTime }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="seat_details">
+                <div class="train-id" id="train"><span>車次</span>{{ ticket.trainID }}</div>
+                <div class="train-id" id="carriage"><span>車廂</span>{{ ticket.carriageID if ticket.carriageID|length == 2 else "0" + ticket.carriageID }}</div>
+                <div class="train-id" id="seat"><span>座位</span>{{ ticket.seatID }}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+{% endblock %}

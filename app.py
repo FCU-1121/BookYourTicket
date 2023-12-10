@@ -23,7 +23,9 @@ def notification():
 
 @app.route('/myTicket')
 def myTicket():
-    return render_template('myticket.html', title = 'YourTicket')
+    with open('./static/json/myTickets.json', 'r', encoding='utf-8') as f:
+        tickets = json.load(f)['myTickets']
+    return render_template('myticket.html', title = 'YourTicket', tickets=tickets)
 
 @app.route('/showTickets')
 def showTickets():
@@ -64,7 +66,7 @@ def updateConfigOfPosition():
         data["startPosition"] = startendPosition["start-position"]
         data["endPosition"] = startendPosition["end-position"]
         print(data)
-        with open('./static/json/config.json', 'w') as file:
+        with open('./static/json/config.json', 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
         return jsonify({"status": "success"})
 
@@ -83,13 +85,12 @@ def updateMyTickets():
         print(newTicket)
         data["myTickets"].append(newTicket)
         print(data["myTickets"])
-        with open('./static/json/myTickets.json', 'w') as file:
+        with open('./static/json/myTickets.json', 'w', encoding='utf-8') as file:
             json.dump(data, file, indent=2, ensure_ascii=False)
         return jsonify({"status": "success"})
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
-
 
 if __name__ == '__main__':
     app.run(debug=True, port = 5004)

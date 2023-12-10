@@ -5,35 +5,70 @@
       "endPosition": "台中",
       "startTime": "12:00",
       "arriveTime": "17:00",
-      "trainID": "1007"
+      "trainID": "1007",
+      "carriageID": "10",
+      "seatID": "9F",
+      "orderID": "03633164",
+      "type": "學生票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2022/12/10",
+      "routeType": "單程"
     },
     {
       "startPosition": "基隆",
       "endPosition": "台中",
       "startTime": "12:00",
       "arriveTime": "17:00",
-      "trainID": "1007"
+      "trainID": "1007",
+      "carriageID": "1",
+      "seatID": "9F",
+      "orderID": "03633164",
+      "type": "學生票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2022/12/10",
+      "routeType": "單程"
     },
     {
       "startPosition": "基隆",
       "endPosition": "台中",
       "startTime": "12:00",
       "arriveTime": "17:00",
-      "trainID": "1007"
+      "trainID": "1007",
+      "carriageID": "5",
+      "seatID": "6A",
+      "orderID": "03633164",
+      "type": "敬老票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2023/12/10",
+      "routeType": "單程"
     },
     {
       "startPosition": "基隆",
       "endPosition": "台中",
       "startTime": "08:00",
       "arriveTime": "13:00",
-      "trainID": "1001"
+      "trainID": "1001",
+      "carriageID": "11",
+      "seatID": "4C",
+      "orderID": "03633164",
+      "type": "孩童票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2023/11/29",
+      "routeType": "單程"
     },
     {
       "startPosition": "基隆",
       "endPosition": "台中",
       "startTime": "08:00",
       "arriveTime": "13:00",
-      "trainID": "1001"
+      "trainID": "1001",
+      "carriageID": "8",
+      "seatID": "6A",
+      "orderID": "03633164",
+      "type": "成人票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2023/12/10",
+      "routeType": "單程"
     }
   ]
 }
