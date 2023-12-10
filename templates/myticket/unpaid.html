@@ -1,0 +1,14 @@
+{% extends 'myticket/myticket.html' %}
+{% block css %}
+<link rel="stylesheet" href="../../static/css/myticket/unpaid.css">
+{{ super() }}
+{% endblock %}
+
+{% block ticket_infor %}
+<main>
+    <div class="ticket-container">
+        <div class="card">
+        </div>
+    </div>
+</main>
+{% endblock %}
