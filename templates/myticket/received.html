@@ -1,11 +1,11 @@
-<!-- myticket.html -->
+{% extends 'myticket/myticket.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/css/myticket/myticket.css">
+<link rel="stylesheet" href="../../static/css/myticket/received.css">
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+{{ super() }}
 {% endblock %}
-{% extends 'baseof.html' %}
 
-{% block content %}
+{% block ticket_infor %}
 <main>
     {% for ticket in tickets %}
     <div class="ticket-container">
