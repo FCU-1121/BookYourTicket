@@ -21,15 +21,11 @@ def about():
 def notification():
     return render_template('notification.html', title='Notification')
 
-@app.route('/myTicket/received')
+@app.route('/myTicket')
 def myTicket():
     with open('./static/json/myTickets.json', 'r', encoding='utf-8') as f:
         tickets = json.load(f)['myTickets']
-    return render_template('myticket/received.html', title = 'YourTicket', tickets=tickets)
-
-@app.route('/myTicket/unpaid')
-def tickets():
-    return render_template('myticket/unpaid.html', title='Tickets')
+    return render_template('myticket.html', title = 'YourTicket', tickets=tickets)
 
 @app.route('/showTickets')
 def showTickets():

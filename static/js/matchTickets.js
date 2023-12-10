@@ -157,7 +157,7 @@ async function updateMyTickets(addTicket) {
                     "arriveTime": stationArriveTime,
                     "trainID": trainID
                 });
-                window.location.href = '/myTicket/unpaid';
+                window.location.href = '/myTicket';
             });
 
 
