@@ -1,0 +1,93 @@
+main{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: scroll;
+    .ticket-container{
+        margin: 10px 0;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .card-title{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+            .order-id, .ticket-type{
+                font-size: .8rem;
+            }
+        }
+        .card{
+            width: 95%;
+            height: auto;
+            background-color: white;
+            box-shadow: 0 0 10px darkgray;
+            border-radius: 5px;
+            .ticket_details{
+                height: 1.5rem;
+                padding-top: .2rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                border-bottom: 1px solid gainsboro;
+                #route{
+                    float: left;
+                    font-size: .8rem;
+                }
+                #id{
+                    float: right;
+                    font-size: .8rem;
+                }
+            }
+            .station_details{
+                width: 100%;
+                height: 4.5rem;
+                border-bottom: 4px solid gainsboro;
+                .station-group{
+                    width: 100%;
+                    height: 100%;
+                    padding: 20px 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    i{
+                        color: #3498db;
+                        font-size: 2rem;
+                    }
+                    .station{
+                        .name{
+                            font-size: .8rem;
+                        }
+                        .time{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
+            .seat_details{
+                width: 100%;
+                padding: .5rem .8rem;
+                height: 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 4px solid #3498db;
+                .train-id{
+                    display: flex;
+                    font-size: 1.3rem;
+                    align-items: baseline;
+                    span{
+                        font-size: .7rem;
+                        margin: 2px;
+                    }
+                }
+            }
+        }
+
+    }
+}

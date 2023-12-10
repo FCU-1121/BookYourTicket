@@ -1,0 +1,18 @@
+main {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: scroll;
+}
+main .ticket-container {
+  width: 100%;
+  height: 100%;
+}
+main .ticket-container .card {
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+}/*# sourceMappingURL=unpaid.css.map */
