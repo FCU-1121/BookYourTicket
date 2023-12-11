@@ -1,0 +1,45 @@
+<!-- baseof.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/baseof/baseof.css">
+    <script src="https://releases.jquery.com/git/jquery-git.min.js"></script>
+    {% block css %}
+    {% endblock %}
+    <title> {{ title }} </title>
+</head>
+<body>
+
+<nav>
+    <!-- Navigation content here -->
+    <div class="nav-container">
+        <a href="/">Home</a>
+        <a href="/notification" id="notification"></a>
+    </div>
+    
+    <!-- Add other navigation links as needed -->
+</nav>
+
+<div class="content">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    <!-- Footer content here -->
+    <ul class="tools">
+        <li><a href="/myTicket"><img src="../static/icon/ticket.png" alt="myTicket"></a></li>
+        <li><a href="/bookTicket"><img src="../static/icon/online-booking.png" alt="bookTicket"></a></li>
+        <li><a href="/setting"><img src="../static/icon/setting.png" alt="settings"></a></li>
+        <li><a href="/about"><img src="../static/icon/information.png" alt="about"></a></li>
+    </ul>
+</footer>
+
+</body>
+    <script src="../static/js/baseof.js"></script>
+    
+    {% block js %}
+    {% endblock %}
+</html>

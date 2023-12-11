@@ -1,0 +1,39 @@
+<!-- bookticket2.html -->
+{% extends 'baseof.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../static/css/bookticket2/bookticket2.css">
+{% endblock %}
+
+{% block js %}
+<script src="../static/js/matchTickets.js"></script>
+{% endblock %}
+
+
+{% block content %}
+<div class="bookticket2-nav">
+    <a href="/bookTicket"><img src="../static/icon/left-arrow.png" alt="left-arrow" ></a>
+    <div class="start-end-container">
+        <h1 class="start"></h1>
+        <h1>&nbsp>&nbsp</h1>
+        <h1 class="end"></h1>
+    </div>
+</div>
+
+<ul id="tickets">
+</ul>
+
+<div class="bookcheck-container">
+    <div class="bookcheck">
+        <div class="title">提醒訊息</div>
+        <div class="message">
+            您確定要訂票嗎？
+        </div>
+        <div class="buttons">
+            <button id="cancle">取消</button>
+            <button id="sure">確認</button>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
