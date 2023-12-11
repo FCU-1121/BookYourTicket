@@ -1,0 +1,68 @@
+{% extends 'baseof.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../../static/css/myticket/details.css">
+{% endblock %}
+
+{% block content %}
+<main class="ticket-container">
+    <section id="ticket-information">
+        <div class="order-details">
+            <span class="left">訂位代號</span>
+            <span class="value right">{{ ticket.orderID }}</span>
+        </div>
+        <div class="ticket-details">
+            {% for d in ticket.orderDetails %}
+                {% if d.key is not string %}
+                    <ul class="item">
+                        <li class="item-name">{{ d.key|join("/") }}</li>
+                        <li class="item-value">{{ d.value|join("/") }}</li>
+                    </ul>
+                {% else %}
+                    <ul class="item">
+                        <li class="item-name">{{ d.key }}</li>
+                        {% if d.value is not string %}
+                            {% for t in d.value %}
+                                <li class="item-value">{{ t.type }} x {{t.number}}</li>
+                            {% endfor %}
+                        {% else %}
+                            <li class="item-value">{{ d.value }}</li>
+                        {% endif %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="price-details">
+            <span class="left">總票價</span>
+            <span class="right">TWD ???</span>
+        </div>
+    </section>
+    <div class="buttons">
+        <button onclick="window.history.back(); window.location.href= 'unpaid'">等等再付</button>
+        <button onclick="alert('繳款成功')">立即付款</button>
+    </div>
+    <!-- <section id="route-information">
+        <div class="route-details">
+            <span></span>
+        </div>
+        <div class="station-details">
+            <div class="station" id="start">
+                <div class="name"></div>
+                <div class="time"></div>
+            </div>
+            <div class="station" id="end">
+                <div class="name"></div>
+                <div class="time"></div>
+            </div>
+            <div class="type-frame">
+                <div class="type"></div>
+                <div class="seat-deatils">
+                    <span class="carriage"></span>
+                    <span class="seat"></span>
+                </div>
+                div.price
+            </div>
+        </div>
+    </section> -->
+</main>
+{% endblock %}

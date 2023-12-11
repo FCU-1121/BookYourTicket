@@ -31,6 +31,11 @@ main .ticket-container .card {
   background-color: white;
   box-shadow: 0 0 10px darkgray;
   border-radius: 5px;
+  cursor: pointer;
+}
+main .ticket-container .card:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 30px darkgray;
 }
 main .ticket-container .card .ticket_details {
   height: 1.5rem;

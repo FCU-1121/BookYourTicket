@@ -29,6 +29,11 @@ main{
             background-color: white;
             box-shadow: 0 0 10px darkgray;
             border-radius: 5px;
+            cursor: pointer;
+            &:hover{
+                transition: .5s;
+                box-shadow: 0 0 30px darkgray;
+            }
             .ticket_details{
                 height: 1.5rem;
                 padding-top: .2rem;

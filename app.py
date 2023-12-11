@@ -8,6 +8,9 @@ import json
 app = Flask(__name__)
 CORS(app)  # 启用 CORS，允许跨域请求
 
+with open('./static/json/myTickets.json', 'r', encoding='utf-8') as f:
+    tickets = json.load(f)['myTickets']
+
 @app.route('/')
 @app.route('/bookTicket')
 def bookTicket():
@@ -22,14 +25,19 @@ def notification():
     return render_template('notification.html', title='Notification')
 
 @app.route('/myTicket/received')
-def myTicket():
-    with open('./static/json/myTickets.json', 'r', encoding='utf-8') as f:
-        tickets = json.load(f)['myTickets']
+def received():
     return render_template('myticket/received.html', title = 'YourTicket', tickets=tickets)
 
 @app.route('/myTicket/unpaid')
-def tickets():
-    return render_template('myticket/unpaid.html', title='Tickets')
+def unpaid():
+    return render_template('myticket/unpaid.html', title='Tickets', tickets=tickets)
+
+@app.route('/myTickets/details', methods=['POST', 'GET'])
+def show_details():
+    data = request.get_json()
+    ticket = next((t for t in tickets if t['orderID'] == data['orderID']), None)
+    print(ticket)
+    return render_template('myticket/details.html', title='Ticket Details', ticket=ticket)
 
 @app.route('/showTickets')
 def showTickets():

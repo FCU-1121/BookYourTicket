@@ -9,10 +9,59 @@ main{
     .ticket-container{
         width: 100%;
         height: 100%;
+        margin: 10px 0;
         .card{
             width: 100%;
-            height: 5rem;
+            max-height: 8rem;
+            height: auto;
             background-color: white;
+            padding: 5px;
+            padding-top: 0;
+            box-shadow: 0 0 10px darkgray;
+            cursor: pointer;
+            &:hover{
+                transition: .5s;
+                box-shadow: 0 0 30px darkgray;
+            }
+            .ticket-details{
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid gray;
+                span{
+                    padding: 5px;
+                    font-size: .8rem;
+                }
+                #state{
+                    color:orangered;
+                }
+            }
+            .route-details{
+                padding: 5px;
+                #route{
+                    font-size: .8rem;
+                }
+                .station-group{
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    i{
+                        color: #3498db;
+                        font-size: 2rem;
+                    }
+                    .station{
+                        .name{
+                            font-size: .8rem;
+                            opacity: .8;
+                        }
+                        .time{
+                            font-size: 1.3rem;
+                        }
+                    }
+                }
+            }
         }
     }
 }

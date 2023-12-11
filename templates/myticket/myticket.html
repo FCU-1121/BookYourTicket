@@ -1,6 +1,7 @@
 {% extends 'baseof.html' %}
 {% block css %}
 <link rel="stylesheet" href="../../static/css/myticket/myticket.css">
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 {% endblock %}
 
 {% block content %}
@@ -15,13 +16,5 @@
 
 
 {% block js %}
-<script>
-    if(window.location.href.includes("unpaid")){
-        document.getElementsByClassName('left')[0].classList.remove('clicked')
-        document.getElementsByClassName('right')[0].classList.add('clicked')
-    }else{
-        document.getElementsByClassName('right')[0].classList.remove('clicked')
-        document.getElementsByClassName('left')[0].classList.add('clicked')
-    }
-</script>
+<script src="../../static/js/myTicket.js"></script>
 {% endblock %}

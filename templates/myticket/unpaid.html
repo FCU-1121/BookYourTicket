@@ -6,9 +6,29 @@
 
 {% block ticket_infor %}
 <main>
+    {% for ticket in tickets %}
     <div class="ticket-container">
-        <div class="card">
+        <div class="card" onclick="sendDetails('{{ ticket.orderID }}')">
+            <div class="ticket-details">
+                <span id="order-id">訂位代號：{{ ticket.orderID }}</span>
+                <span id="state">未付款</span>
+            </div>
+            <div class="route-details">
+                <span id="route">{{ ticket.routeType }} · {{ ticket.leaveDate }}</span>
+                <div class="station-group">
+                    <div id="start" class="station">
+                        <div class="name">{{ ticket.startPosition }}</div>
+                        <div class="time">{{ ticket.startTime }}</div>
+                    </div>
+                    <i class="fi fi-br-arrow-right"></i>
+                    <div id="end" class="station">
+                        <div class="name" style="float: right;">{{ ticket.endPosition }}</div>
+                        <div class="time">{{ ticket.arriveTime }}</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    {% endfor %}
 </main>
 {% endblock %}
