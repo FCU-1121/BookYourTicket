@@ -11,7 +11,11 @@
         <div class="card" onclick="sendDetails('{{ ticket.orderID }}')">
             <div class="ticket-details">
                 <span id="order-id">訂位代號：{{ ticket.orderID }}</span>
-                <span id="state">未付款</span>
+                {% if ticket.orderDetails[0].value == '未付款' %}
+                    <span id="state" class="unpaid">{{ ticket.orderDetails[0].value }}</span>
+                {% else %}
+                    <span id="state" class="onpaid">{{ ticket.orderDetails[0].value }}</span>
+                {% endif %}
             </div>
             <div class="route-details">
                 <span id="route">{{ ticket.routeType }} · {{ ticket.leaveDate }}</span>

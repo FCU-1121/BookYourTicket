@@ -35,8 +35,11 @@ main .ticket-container .card .ticket-details span {
   padding: 5px;
   font-size: 0.8rem;
 }
-main .ticket-container .card .ticket-details #state {
+main .ticket-container .card .ticket-details .unpaid {
   color: orangered;
+}
+main .ticket-container .card .ticket-details .onpaid {
+  color: green;
 }
 main .ticket-container .card .route-details {
   padding: 5px;

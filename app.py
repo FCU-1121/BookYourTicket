@@ -1,6 +1,6 @@
 # app.py
 
-from flask import Flask, render_template, request, jsonify, make_response
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 from flask_cors import CORS
 import json
 
@@ -103,6 +103,16 @@ def updateMyTickets():
 
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
+
+@app.route('/payMeMoney/<ticketID>', methods=['POST'])
+def payMeMoney(ticketID):
+    for t in tickets:
+        if t['orderID'] == ticketID:
+            t['orderDetails'][0]['value'] = "已付款"
+    with open('./static/json/myTickets.json', 'w', encoding='utf-8') as f:
+        data = {'myTickets': tickets}
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    return redirect(url_for('unpaid'))
 
 if __name__ == '__main__':
     app.run(debug=True, port = 5004)
