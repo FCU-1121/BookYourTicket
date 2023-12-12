@@ -9,11 +9,14 @@
       "carriageID": 12,
       "seatID": "8C",
       "orderID": "01234567",
+      "type": "學生票",
+      "ticketID": "2902612444968",
+      "leaveDate": "2022/12/10",
       "routeType": "單程",
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "未付款"
+          "value": "已付款"
         },
         {
           "key": "交易期限",
