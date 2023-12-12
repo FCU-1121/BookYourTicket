@@ -1,206 +1,23 @@
 {
   "myTickets": [
     {
-      "startPosition": "基隆",
-      "endPosition": "台中",
-      "startTime": "12:00",
-      "arriveTime": "17:00",
-      "trainID": "1007",
-      "carriageID": "10",
-      "seatID": "9F",
-      "orderID": "03633164",
-      "type": "學生票",
-      "ticketID": "2902612444968",
-      "leaveDate": "2022/12/10",
-      "routeType": "單程",
-      "orderDetails": [
-        {
-          "key": "交易狀態",
-          "value": "已付款"
-        },
-        {
-          "key": "交易期限",
-          "value": "2023/12/12"
-        },
-        {
-          "key": [
-            "行程",
-            "車廂",
-            "座位種類"
-          ],
-          "value": [
-            "單程票",
-            "標準車廂",
-            "對號座"
-          ]
-        },
-        {
-          "key": "票數",
-          "value": [
-            {
-              "type": "學生票",
-              "number": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "startPosition": "基隆",
-      "endPosition": "台中",
-      "startTime": "12:00",
-      "arriveTime": "17:00",
-      "trainID": "1007",
-      "carriageID": "1",
-      "seatID": "9F",
-      "orderID": "03123164",
-      "type": "學生票",
-      "ticketID": "2902612444968",
-      "leaveDate": "2022/12/10",
-      "routeType": "單程",
-      "orderDetails": [
-        {
-          "key": "交易狀態",
-          "value": "未付款"
-        },
-        {
-          "key": "交易期限",
-          "value": "2023/12/12"
-        },
-        {
-          "key": [
-            "行程",
-            "車廂",
-            "座位種類"
-          ],
-          "value": [
-            "單程票",
-            "標準車廂",
-            "對號座"
-          ]
-        },
-        {
-          "key": "票數",
-          "value": [
-            {
-              "type": "學生票",
-              "number": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "startPosition": "基隆",
-      "endPosition": "台中",
-      "startTime": "12:00",
-      "arriveTime": "17:00",
-      "trainID": "1007",
-      "carriageID": "5",
-      "seatID": "6A",
-      "orderID": "03679064",
-      "type": "敬老票",
-      "ticketID": "2902612444968",
-      "leaveDate": "2023/12/10",
-      "routeType": "單程",
-      "orderDetails": [
-        {
-          "key": "交易狀態",
-          "value": "已付款"
-        },
-        {
-          "key": "交易期限",
-          "value": "2023/12/12"
-        },
-        {
-          "key": [
-            "行程",
-            "車廂",
-            "座位種類"
-          ],
-          "value": [
-            "單程票",
-            "標準車廂",
-            "對號座"
-          ]
-        },
-        {
-          "key": "票數",
-          "value": [
-            {
-              "type": "敬老票",
-              "number": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "startPosition": "基隆",
-      "endPosition": "台中",
-      "startTime": "08:00",
-      "arriveTime": "13:00",
-      "trainID": "1001",
-      "carriageID": "11",
-      "seatID": "4C",
-      "orderID": "04152364",
-      "type": "孩童票",
-      "ticketID": "2902612444968",
-      "leaveDate": "2023/11/29",
-      "routeType": "單程",
-      "orderDetails": [
-        {
-          "key": "交易狀態",
-          "value": "未付款"
-        },
-        {
-          "key": "交易期限",
-          "value": "2023/12/12"
-        },
-        {
-          "key": [
-            "行程",
-            "車廂",
-            "座位種類"
-          ],
-          "value": [
-            "單程票",
-            "標準車廂",
-            "對號座"
-          ]
-        },
-        {
-          "key": "票數",
-          "value": [
-            {
-              "type": "孩童票",
-              "number": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "startPosition": "基隆",
-      "endPosition": "台中",
-      "startTime": "08:00",
-      "arriveTime": "13:00",
-      "trainID": "1001",
-      "carriageID": "8",
-      "seatID": "6A",
+      "startPosition": "台中",
+      "endPosition": "台南",
+      "startTime": "11:00",
+      "arriveTime": "15:00",
+      "trainID": "1003",
+      "carriageID": 12,
+      "seatID": "8C",
       "orderID": "01234567",
-      "type": "成人票",
-      "ticketID": "2902612444968",
-      "leaveDate": "2023/12/10",
       "routeType": "單程",
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "已付款"
+          "value": "未付款"
         },
         {
           "key": "交易期限",
-          "value": "2023/12/12"
+          "value": "2023/01/05"
         },
         {
           "key": [

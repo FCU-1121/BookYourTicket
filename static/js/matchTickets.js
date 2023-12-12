@@ -155,7 +155,43 @@ async function updateMyTickets(addTicket) {
                     "endPosition": configObj["endPosition"],
                     "startTime": stationStartTime,
                     "arriveTime": stationArriveTime,
-                    "trainID": trainID
+                    "trainID": trainID,
+                    "carriageID": Math.floor(Math.random() * 15) + 1,
+                    "seatID": (Math.floor(Math.random() * 30) + 1) + (String.fromCharCode(65 + Math.floor(Math.random() * 4))),
+                    "orderID": "01234567",
+                    "routeType": "單程",
+                    "orderDetails": [
+                        {
+                          "key": "交易狀態",
+                          "value": "未付款"
+                        },
+                        {
+                          "key": "交易期限",
+                          "value": "2023/01/05"
+                        },
+                        {
+                          "key": [
+                            "行程",
+                            "車廂",
+                            "座位種類"
+                          ],
+                          "value": [
+                            "單程票",
+                            "標準車廂",
+                            "對號座"
+                          ]
+                        },
+                        {
+                          "key": "票數",
+                          "value": [
+                            {
+                              "type": "全票",
+                              "number": 1
+                            }
+                          ]
+                        }
+                      ]
+
                 });
                 window.location.href = '/myTicket/unpaid';
             });
