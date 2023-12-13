@@ -89,7 +89,7 @@ def updateConfigOfPosition():
 
 @app.route('/updateMyTickets', methods=['POST'])
 def updateMyTickets():
-    with open('./static/json/myTickets.json', 'r') as file:
+    with open('./static/json/myTickets.json', 'r', encoding='utf-8') as file:
         data = json.load(file)
     try:
         # 從請求的JSON主體中解析數據

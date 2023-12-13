@@ -141,11 +141,13 @@ async function updateMyTickets(addTicket) {
             const stationArriveTime = endTimeElement.textContent;
             const trainID = trainNumberElement.textContent.trim(); // 移除可能的空格
             checkBar.classList.add('is-active');
+            console.log("Test")
 
             $('#cancle').on('click', () => {
                 checkBar.classList.remove('is-active');
             });
             
+            console.log($('#sure'))
             $('#sure').on('click', () => {
                 checkBar.classList.remove('is-active');
                 console.log(stationArriveTime);
@@ -158,6 +160,7 @@ async function updateMyTickets(addTicket) {
                     "trainID": trainID,
                     "carriageID": Math.floor(Math.random() * 15) + 1,
                     "seatID": (Math.floor(Math.random() * 30) + 1) + (String.fromCharCode(65 + Math.floor(Math.random() * 4))),
+                    "type": "學生票",
                     "orderID": "01234567",
                     "routeType": "單程",
                     "orderDetails": [

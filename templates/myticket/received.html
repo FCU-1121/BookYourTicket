@@ -32,7 +32,7 @@
             </div>
             <div class="seat_details">
                 <div class="train-id" id="train"><span>車次</span>{{ ticket.trainID }}</div>
-                <div class="train-id" id="carriage"><span>車廂</span>{{ ticket.carriageID if ticket.carriageID >= 10 else "0" + ticket.carriageID }}</div>
+                <div class="train-id" id="carriage"><span>車廂</span>{{ ticket.carriageID if ticket.carriageID|length >= 2  else "0" + ticket.carriageID }}</div>
                 <div class="train-id" id="seat"><span>座位</span>{{ ticket.seatID }}</div>
             </div>
         </div>
