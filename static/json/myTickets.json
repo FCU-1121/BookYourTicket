@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "myTickets": [
     {
       "startPosition": "台中",
@@ -90,3 +91,7 @@
     }
   ]
 }
+=======
+  "myTickets": []
+}
+>>>>>>> 4dde30d (update)
