@@ -1,0 +1,21 @@
+<!-- notification -->
+
+{% extends 'baseof.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="../../static/css/notification/notification.css">
+{% endblock %}
+
+{% block content %}
+<div id="notification-navbar">
+    <a class="left clicked" href="/notification/ticket">訂票通知</a>
+    <a class="right" href="/notification/system">系統通知</a>
+</div>
+
+{% block ticket_infor %}
+{% endblock %}
+{% endblock %}
+
+{% block js %}
+<script src="../../static/js/notification.js"></script>
+{% endblock %}

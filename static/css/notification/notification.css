@@ -1,0 +1,16 @@
+#notification-navbar {
+    width: 100%;
+    height: 2rem;
+    background-color: #3498db;
+    display: flex;
+}
+#notification-navbar .left, #notification-navbar .right {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+#notification-navbar .clicked {
+    border-bottom: 5px solid orange;
+    cursor: auto;
+}/*# sourceMappingURL=notification.css.map */

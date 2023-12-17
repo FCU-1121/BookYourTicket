@@ -20,9 +20,13 @@ def bookTicket():
 def about():
     return render_template('about.html', title = 'About')
 
-@app.route('/notification')
-def notification():
-    return render_template('notification.html', title='Notification')
+@app.route('/notification/system')
+def system():
+    return render_template('notification/system.html', title='System')
+
+@app.route('/notification/ticket')
+def ticket():
+    return render_template('notification/ticket.html', title='Ticket')
 
 @app.route('/myTicket/received')
 def received():
