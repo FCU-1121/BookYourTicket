@@ -1,4 +1,85 @@
 <!-- setting.html -->
 {% extends 'baseof.html' %}
 
+{% block css %}
+<title>設定</title>
+<link rel="stylesheet" href="../static/css/baseof/style.css" id="pageStyle">
+<style>
+    .switch-container {
+        display: flex;
+        align-items: center;
+    }
 
+    .switch-label {
+        margin-right: 10px;
+    }
+
+    .notification {
+        font-size: 14px;
+        color: #c54a4a;
+    }
+</style>
+{% endblock %}
+
+    {% block content %}
+    <h2>設定</h2>
+    <div class="show-container">
+    <form id="settingsForm">
+        <form method="post" action="/switchStyle">
+            <!-- <label for="settingType">選擇設定類型：</label>
+            <select id="settingType" name="settingType" onchange="showSettings()">
+                <option value="userSettings">使用者設定</option>
+                <option value="notificationSettings">通知設定</option>
+            </select> -->
+
+            <div id="userSettings" class="settingSection">
+                <h3>使用者設定</h3>
+                <label for="backgroundColor">背景顏色：</label>
+                <select id="selectOption" name="selectOption" onchange="changeBackgroundColor()">
+                    <option value="style">style</option>
+                    <option value="blue">blue</option>
+                  </select>
+            </div>
+
+            <div id="notificationSettings" class="settingSection">
+                <h3>通知設定</h3>
+                <div class="switch-container">
+                    <input type="checkbox" id="toggleSwitch" width="50%">
+                    <div>
+                        <span class="notification" id="notificationText">啟用通知</span>
+                    </div>
+                </div>
+
+                <!-- 在這裡添加通知設定的相關表單元素 -->
+            </div>
+            <button type="submit" class="amount-ok" value="儲存設定">儲存設定</button>
+        </form>
+    </div>
+    <!-- </form> -->
+    {% endblock %}
+
+    {% block js %}
+    <script>
+        // function showSettings() {
+        //     var settingType = document.getElementById("settingType").value;
+        //     var settingSections = document.getElementsByClassName("settingSection");
+
+        //     for (var i = 0; i < settingSections.length; i++) {
+        //         settingSections[i].style.display = "none";
+        //     }
+
+        //     document.getElementById(settingType).style.display = "block";
+        // }
+
+        function changeBackgroundColor() {
+            var input = document.getElementById("selectOption").value;
+            var pageStyle = document.getElementById("pageStyle");
+
+            if (input.toLowerCase() === "blue") {
+                pageStyle.href = "../static/css/baseof/blue.css";  // 啟用黑色樣式表
+            } else {
+                pageStyle.href = "../static/css/baseof/style.css";  // 啟用一般樣式表
+            }
+        }
+    </script>
+    {% endblock %}
