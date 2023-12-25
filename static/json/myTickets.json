@@ -23,8 +23,16 @@
           "value": "2023/01/05"
         },
         {
-          "key": ["行程", "車廂", "座位種類"],
-          "value": ["單程票", "標準車廂", "對號座"]
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
         },
         {
           "key": "票數",
@@ -58,8 +66,188 @@
           "value": "2023/01/05"
         },
         {
-          "key": ["行程", "車廂", "座位種類"],
-          "value": ["單程票", "標準車廂", "對號座"]
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "基隆",
+      "endPosition": "新竹",
+      "startTime": "12:00",
+      "arriveTime": "15:00",
+      "trainID": "1007",
+      "carriageID": 14,
+      "seatID": "6D",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "基隆",
+      "endPosition": "新竹",
+      "startTime": "12:00",
+      "arriveTime": "15:00",
+      "trainID": "1007",
+      "carriageID": 1,
+      "seatID": "22B",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "桃園",
+      "endPosition": "新竹",
+      "startTime": "10:00",
+      "arriveTime": "11:00",
+      "trainID": "1001",
+      "carriageID": 15,
+      "seatID": "15D",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "基隆",
+      "endPosition": "苗栗",
+      "startTime": "15:00",
+      "arriveTime": "19:00",
+      "trainID": "1009",
+      "carriageID": 9,
+      "seatID": "18B",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
         },
         {
           "key": "票數",
