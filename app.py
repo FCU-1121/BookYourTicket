@@ -11,6 +11,9 @@ CORS(app)  # 启用 CORS，允许跨域请求
 with open('./static/json/myTickets.json', 'r', encoding='utf-8') as f:
     tickets = json.load(f)['myTickets']
 
+with open('./static/json/systemNotificationData.json', 'r', encoding='utf-8') as f:
+    systems = json.load(f)['systems']
+
 @app.route('/')
 @app.route('/bookTicket')
 def bookTicket():
@@ -22,11 +25,11 @@ def about():
 
 @app.route('/notification/system')
 def system():
-    return render_template('notification/system.html', title='System')
+    return render_template('notification/system.html', title='System', systems=systems)
 
 @app.route('/notification/ticket')
 def ticket():
-    return render_template('notification/ticket.html', title='Ticket')
+    return render_template('notification/ticket.html', title='Ticket',)
 
 @app.route('/myTicket/received')
 def received():
@@ -117,6 +120,8 @@ def payMeMoney(ticketID):
         data = {'myTickets': tickets}
         json.dump(data, f, indent=2, ensure_ascii=False)
     return redirect(url_for('unpaid'))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True, port = 5002)

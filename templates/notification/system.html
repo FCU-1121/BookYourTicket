@@ -5,8 +5,13 @@
 {{ super() }}
 {% endblock %}
 
-{% block ticket_infor %}
-<main>
-    
-</main>
+{% block system_infor %}
+    {% for system in systems %}
+    <h1 class="text">{{ system.text }}</h1>
+
+    {% endfor %}
+{% endblock %}
+
+{% block js %}
+<script src="../../static/js/notification.js"></script>
 {% endblock %}

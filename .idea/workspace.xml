@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="42b8462b-aaba-4a07-904b-818d0eebc2ab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/notification/system.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/notification/system.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/notification.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/json/myTickets.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/json/myTickets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/notification/notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/notification/notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/notification/system.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/notification/system.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
