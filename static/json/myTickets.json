@@ -59,7 +59,7 @@
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "未付款"
+          "value": "已付款"
         },
         {
           "key": "交易期限",
@@ -102,7 +102,7 @@
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "未付款"
+          "value": "已付款"
         },
         {
           "key": "交易期限",
@@ -145,7 +145,7 @@
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "未付款"
+          "value": "已付款"
         },
         {
           "key": "交易期限",
@@ -188,7 +188,7 @@
       "orderDetails": [
         {
           "key": "交易狀態",
-          "value": "未付款"
+          "value": "已付款"
         },
         {
           "key": "交易期限",
@@ -225,6 +225,608 @@
       "trainID": "1009",
       "carriageID": 9,
       "seatID": "18B",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "已付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "新竹",
+      "endPosition": "苗栗",
+      "startTime": "16:30",
+      "arriveTime": "17:30",
+      "trainID": "1008",
+      "carriageID": 6,
+      "seatID": "13D",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 7,
+      "seatID": "25C",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "新竹",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "15:00",
+      "trainID": "1003",
+      "carriageID": 2,
+      "seatID": "18A",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "新竹",
+      "endPosition": "台南",
+      "startTime": "14:30",
+      "arriveTime": "20:30",
+      "trainID": "1012",
+      "carriageID": 11,
+      "seatID": "8D",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "桃園",
+      "endPosition": "新竹",
+      "startTime": "17:00",
+      "arriveTime": "18:00",
+      "trainID": "1009",
+      "carriageID": 8,
+      "seatID": "10C",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "基隆",
+      "endPosition": "桃園",
+      "startTime": "12:00",
+      "arriveTime": "14:00",
+      "trainID": "1007",
+      "carriageID": 1,
+      "seatID": "13C",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 2,
+      "seatID": "11A",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 7,
+      "seatID": "29C",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 11,
+      "seatID": "11C",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 8,
+      "seatID": "5B",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 10,
+      "seatID": "18A",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "17:00",
+      "trainID": "1001",
+      "carriageID": 5,
+      "seatID": "24A",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 12,
+      "seatID": "21D",
+      "type": "學生票",
+      "orderID": "01234567",
+      "routeType": "單程",
+      "orderDetails": [
+        {
+          "key": "交易狀態",
+          "value": "未付款"
+        },
+        {
+          "key": "交易期限",
+          "value": "2023/01/05"
+        },
+        {
+          "key": [
+            "行程",
+            "車廂",
+            "座位種類"
+          ],
+          "value": [
+            "單程票",
+            "標準車廂",
+            "對號座"
+          ]
+        },
+        {
+          "key": "票數",
+          "value": [
+            {
+              "type": "全票",
+              "number": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "startPosition": "台北",
+      "endPosition": "台南",
+      "startTime": "09:00",
+      "arriveTime": "16:00",
+      "trainID": "0913",
+      "carriageID": 5,
+      "seatID": "24D",
       "type": "學生票",
       "orderID": "01234567",
       "routeType": "單程",

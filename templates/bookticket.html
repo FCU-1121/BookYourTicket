@@ -2,120 +2,127 @@
 {% extends 'baseof.html' %}
 
 {% block css %}
-    <link rel="stylesheet" href="../static/css/bookticket/bookticket.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<link rel="stylesheet" href="../static/css/bookticket/bookticket.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 {% endblock %}
 
 {% block js %}
-    <script src="../static/js/bookticket.js"></script>
-    <script src="../static/js/select_time.js"></script>
-    <script src="../static/js/select_position.js"></script>
-    <script src="../static/js/select_amount.js"></script>
+<script src="../static/js/bookticket.js"></script>
+<script src="../static/js/select_time.js"></script>
+<script src="../static/js/select_position.js"></script>
+<script src="../static/js/select_amount.js"></script>
 {% endblock %}
 
 
 {% block content %}
-    <div class="show-container">
-        <div class="position-container">
-            <div class="show-position" id="start-position"></div>
-            <div id="swap" onclick="swap()"><img src="../static/icon/swap.png" alt="swap"></div>
-            <div class="show-position" id="end-position"></div>
-        </div>
+<div class="show-container">
+  <div class="position-container">
+    <div class="show-position" id="start-position"></div>
+    <div id="swap" onclick="swap()"><img src="../static/icon/swap.png" alt="swap"></div>
+    <div class="show-position" id="end-position"></div>
+  </div>
 
-        <div class="time-container">
-            <h1 class="title">出發時間</h1>
-            <div class="show-time" id="start-time"></div>
-        </div>
+  <div class="time-container">
+    <h1 class="title">出發時間</h1>
+    <div class="show-time" id="start-time"></div>
+  </div>
 
-        <div class="amount-container">
-            <h1 class="title">您的票種</h1>
+  <div class="amount-container">
+    <h1 class="title">您的票種</h1>
 
-            <ul class="show-amount">
-            </ul>
-        </div>
-    </div>    
+    <ul class="show-amount">
+    </ul>
+  </div>
+  <div class="window-road">
+     <label for="seatPreference" class="wr">靠窗邊：</label>
+      <select id="seatPreference">
+        <option value="window">是</option>
+        <option value="aisle">否</option>
+      </select>
+  </div>
+</div>    
 
-    <a href="/showTickets" style="text-decoration: none;" id="search">查詢</a>
+
+<a href="/showTickets" style="text-decoration: none;" id="search">查詢</a>
 
 
-    <div class="select-container">
-        <div class="select-position">
-            <div class="position">
-                <ul class="start-position">
-                </ul>
-            </div>
-    
-            <div class="position">
-                <ul class="end-position">
-                </ul>
-            </div>
-        </div>
-
-        <div class="buttons">
-            <button id="swap" onclick="swap()">交換起訖站</button>
-            <button id="ok" onclick="removeClass()">完成</button>
-        </div>
+<div class="select-container">
+  <div class="select-position">
+    <div class="position">
+      <ul class="start-position">
+      </ul>
     </div>
 
+    <div class="position">
+      <ul class="end-position">
+      </ul>
+    </div>
+  </div>
 
-    <div class="select-time">
-        <form id="bookingForm">
-            <label for="date">選擇日期:</label>
-            <input type="text" id="date" name="date" required>
-          
-            <label for="time">選擇時間:</label>
-            <select id="time" name="time" required></select>
-          
-            <button type="button" onclick="submitForm()">完成</button>
-        </form>
+  <div class="buttons">
+    <button id="swap" onclick="swap()">交換起訖站</button>
+    <button id="ok" onclick="removeClass()">完成</button>
+  </div>
+</div>
+
+
+<div class="select-time">
+  <form id="bookingForm">
+    <label for="date">選擇日期:</label>
+    <input type="text" id="date" name="date" required>
+
+    <label for="time">選擇時間:</label>
+    <select id="time" name="time" required></select>
+
+    <button type="button" onclick="submitForm()">完成</button>
+  </form>
+</div>
+
+<div class="select-amount">
+  <div class="select-amount-container">
+    <div class="ticket-type">
+      <div class="title">成人票：</div>
+      <div class="quantity">
+        <button onclick="decrement('adult')">-</button>
+        <span id="adult">0</span>
+        <button onclick="increment('adult')" class="increment">+</button>
+      </div>
     </div>
 
-    <div class="select-amount">
-        <div class="select-amount-container">
-            <div class="ticket-type">
-                <div class="title">成人票：</div>
-                <div class="quantity">
-                    <button onclick="decrement('adult')">-</button>
-                    <span id="adult">0</span>
-                    <button onclick="increment('adult')" class="increment">+</button>
-                </div>
-            </div>
-
-            <div class="ticket-type">
-                <div class="title">孩童票：</div>
-                <div class="quantity">
-                    <button onclick="decrement('child')">-</button>
-                    <span id="child">0</span>
-                    <button onclick="increment('child')" class="increment">+</button>
-                </div>
-            </div>
-        
-            <div class="ticket-type">
-                <div class="title">敬老票：</div>
-                <div class="quantity">
-                    <button onclick="decrement('senior')">-</button>
-                    <span id="senior">0</span>
-                    <button onclick="increment('senior')" class="increment">+</button>
-                </div>
-            </div>
-        
-            <div class="ticket-type">
-                <div class="title">學生票：</div>
-                <div class="quantity">
-                    <button onclick="decrement('student')">-</button>
-                    <span id="student">0</span>
-                    <button onclick="increment('student')" class="increment">+</button>
-                </div>
-            </div>
-            
-            <div class="result">
-                <div id="total">總票數：0&nbsp&nbsp&nbsp最多選 5 張</div>
-                <div class="alert-message">(最少 1 張，最多選 5 張)</div>
-            </div>
-            
-            <button class="amount-ok" onclick="amountOk()">完成</button>
-        </div>
+    <div class="ticket-type">
+      <div class="title">孩童票：</div>
+      <div class="quantity">
+        <button onclick="decrement('child')">-</button>
+        <span id="child">0</span>
+        <button onclick="increment('child')" class="increment">+</button>
+      </div>
     </div>
 
+    <div class="ticket-type">
+      <div class="title">敬老票：</div>
+      <div class="quantity">
+        <button onclick="decrement('senior')">-</button>
+        <span id="senior">0</span>
+        <button onclick="increment('senior')" class="increment">+</button>
+      </div>
+    </div>
+
+    <div class="ticket-type">
+      <div class="title">學生票：</div>
+      <div class="quantity">
+        <button onclick="decrement('student')">-</button>
+        <span id="student">0</span>
+        <button onclick="increment('student')" class="increment">+</button>
+      </div>
+    </div>
+
+    <div class="result">
+      <div id="total">總票數：0&nbsp&nbsp&nbsp最多選 5 張</div>
+      <div class="alert-message">(最少 1 張，最多選 5 張)</div>
+    </div>
+
+    <button class="amount-ok" onclick="amountOk()">完成</button>
+  </div>
+</div>
 {% endblock %}

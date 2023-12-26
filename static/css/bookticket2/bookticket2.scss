@@ -1,151 +1,166 @@
 .bookticket2-nav {
-    width: 100%;
-    height: 4vh;
-    background-color: #3498db;
-    padding: 2px 10px;
+  width: 100%;
+  height: 4vh;
+  background-color: #3498db;
+  padding: 2px 10px;
 
-    img {
-        position: absolute;
-        top: .3vh;
-        left: .3vw;
-        height: 2.5vh;
-        width: auto;
+  img {
+    position: absolute;
+    top: 0.3vh;
+    left: 0.3vw;
+    height: 2.5vh;
+    width: auto;
+  }
+
+  .start-end-container {
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-size: 16px;
     }
-
-    .start-end-container {
-        width: 30%;
-        height: auto;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        h1 {
-            font-size: 16px;
-        }
-    }
+  }
 }
-
 
 #tickets {
-    overflow-y: scroll;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
+  width: 100%;
+  height: auto;
+  padding: 5px;
+
+  li {
+    cursor: pointer;
+    list-style-type: none;
     width: 100%;
-    height: auto;
-    padding: 5px;
+    height: 8vh;
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    .show-time {
+      width: 100%;
+      height: 6vh;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      .start-end-time {
+        font-size: 30px;
+        font-weight: 600;
+      }
 
-    li {
-        cursor: pointer;
-        list-style-type: none;
-        width: 100%;
-        height: 8vh;
-        background-color: #f0f0f0;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        margin-bottom: 20px;
-        .show-time {
-            width: 100%;
-            height: 6vh;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            .start-end-time {
-                font-size: 30px;
-                font-weight: 600;
-            }
-
-            img {
-                width: 10%;
-                height: auto;
-            }
-        }
-
-        .train-info {
-            width: 90%;
-            height: 2vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            font-size: 16px;
-            color: grey;
-            #train-number {
-                font-size: 16px;
-                color: grey;
-            }
-        }
+      img {
+        width: 10%;
+        height: auto;
+      }
     }
+
+    .train-info {
+      width: 90%;
+      height: 2vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 16px;
+      color: grey;
+      #train-number {
+        font-size: 16px;
+        color: grey;
+      }
+    }
+  }
 }
 
-
 .bookcheck-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(128, 128, 128, 0.554);
-    backdrop-filter: blur(10px);
-    display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(128, 128, 128, 0.554);
+  backdrop-filter: blur(10px);
+  display: none;
 
-    &.is-active {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+  &.is-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bookcheck {
+    overflow: hidden;
+    width: 20vw;
+    height: 20vh;
+    background: #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 0 10px 0;
+    .title {
+      padding-left: 10px;
+      padding-top: 3px;
+      width: 100%;
+      height: 20%;
+      font-size: 18px;
+      background-color: #3498db;
     }
 
-    .bookcheck {
-        overflow: hidden;
-        width: 20vw;
-        height: 20vh;
-        background: #eee;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
+    .message {
+      padding: 10px 20px;
+      width: 100%;
+      height: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .buttons {
+      padding: 10px 20px;
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+        width: 40%;
+        height: auto;
+        padding: 5px;
+        border: none;
+        background-color: #3498db;
         border-radius: 10px;
-        padding: 0 0 10px 0;
-        .title {
-            padding-left: 10px;
-            padding-top: 3px;
-            width: 100%;
-            height: 20%;
-            font-size: 18px;
-            background-color: #3498db;
-        }
-
-        .message {
-            padding: 10px 20px;
-            width: 100%;
-            height: 60%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .buttons {
-            padding: 10px 20px;
-            width: 100%;
-            height: 20%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            button {
-                cursor: pointer;
-                width: 40%;
-                height: auto;
-                padding: 5px;
-                border: none;
-                background-color: #3498db;
-                border-radius: 10px;
-            }
-        }
+      }
     }
+  }
+}
+
+.prev-next {
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  height: 6%;
+  display: flex;
+  justify-content: space-around;
+  align-items: cneter;
+  button {
+    width: 30%;
+    height: 100%;
+    background-color: #3498db;
+    border: none;
+    border-radius: 3px;
+  }
 }
